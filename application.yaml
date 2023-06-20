@@ -1,0 +1,34 @@
+APP_ENV: dev
+ZONE: Eureka
+
+###################### Config Bus Exchange-Name & Exchange-Type #######################
+bus:
+  exchange: EurekaBus
+  type:     direct
+
+##################### RabbitMQ Address ##########################
+spring:
+  rabbitmq:
+    username: admin
+    password: exe@951753
+    host: 192.168.1.59
+    port: 5672
+    virtual-host: /
+
+######################### Actuator Security #######################
+management:
+  security:
+    enabled: false
+
+
+####################### Mainstream DATABASE #########################
+database:
+  host:       192.168.1.4
+  port:       5432
+  name:       sam-dev
+  username:   samdbu
+  password:   samdbu
+
+####################### Security Global Config #########################
+security:
+  saltRound: 10

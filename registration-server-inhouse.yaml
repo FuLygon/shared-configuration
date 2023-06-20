@@ -1,0 +1,25 @@
+eureka:
+  isRoot: true
+  instance:
+    hostname: 127.0.0.1
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 90
+    registry:
+      expected-number-of-renews-per-min: 1
+    metadata-map:
+      configPath: /config
+    prefer-ip-address: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 3000
+  dashboard:
+    path: /eureka-dashboard
+
+test:
+  - app1
+  - app2
